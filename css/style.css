@@ -1,12 +1,11 @@
 * {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+body {
   margin: 0px;
   padding: 0px;
-  list-style: none;
-  box-sizing: border-box;
   direction: rtl;
-  font-size: 32px;
-  color: #463229;
-  font-family: "Cairo", sans-serif;
 }
 
 .navbar {
@@ -22,18 +21,17 @@
 .navbar a {
   text-decoration: none;
   color: #707070;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 22px;
 }
 
 .section1 {
   background: url(../img/Mask\ Group\ 6.png),
-    linear-gradient(to right, rgba(255, 241, 204, 100%), rgb(255, 177, 7, 85%));
+    linear-gradient(to right, rgba(255, 241, 204, 100%), rgb(255, 177, 7, 87%));
   border: 1px solid #707070;
 }
 
 .navbar-list {
-  display: flex;
   align-items: center;
   justify-content: flex-end;
 }
@@ -42,17 +40,17 @@
   margin-right: 35px;
   position: relative;
   white-space: nowrap;
+  list-style: none;
 }
 
 .navbar-list li + li a::before {
   content: "";
   background-color: rgb(112, 112, 112);
   width: 2px;
-  height: 30px;
+  height: 45px;
   position: absolute;
   border-radius: 100px;
   right: -17px;
-  top: 16px;
 }
 
 hr {
@@ -80,20 +78,21 @@ hr {
 
 .section1-right-item h2 > span {
   color: #cd6229;
-  font-size: 38px;
 }
 
 .section1-right-item input[type="text"],
 select {
-  padding: 12px 20px;
-  margin: 8px 0;
+  padding: 17px 37px;
+  margin: 12px 0;
   border: 1px solid #ffffff;
   border-radius: 46px;
+  outline: none;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0, 16%);
 }
 
 h1 {
   color: #a14c1f;
-  font-weight: 800;
+  margin: 12px 0px;
 }
 
 .section1-right-item form {
@@ -113,11 +112,8 @@ h1 {
   background-color: #a14c1f;
   border-radius: 50px;
   border: 1px solid #242323;
-  padding: 4px 45px;
+  padding: 2px 34px;
   margin: auto;
-
-  font-size: 32px;
-  font-weight: 700;
 }
 
 .section2-container {
@@ -154,7 +150,6 @@ h1 {
 
 .section3-item p {
   color: #faf0d7;
-  font-size: 40px;
 }
 
 .section3-item {
@@ -183,12 +178,10 @@ h1 {
 
 .section4-container img {
   width: 100%;
-  height: 100%;
 }
 
 .section4 h1 span {
   color: #fec64d;
-  font-size: 84px;
 }
 
 .section4 .container {
@@ -197,7 +190,7 @@ h1 {
 
 h2 {
   color: #463229;
-  font-size: 38px;
+  margin: 0px;
 }
 
 .section4-contain {
@@ -206,7 +199,6 @@ h2 {
 }
 
 .section4-lists {
-  margin-top: 20px;
   display: flex;
 }
 
@@ -218,8 +210,9 @@ h2 {
 }
 
 .section7 h2 {
-  font-size: 28px;
   color: #ffc74c;
+  font-weight: 700;
+  margin-top: -13px;
 }
 
 .section4-container ~ p {
@@ -227,11 +220,19 @@ h2 {
 }
 
 .list-img {
-  float: right;
-  height: 44.44px;
-  width: 48.15px;
-  margin: 6px 0px;
-  margin-left: 40px;
+  margin: 19px 0px;
+  margin-left: 58px;
+}
+.list-img img {
+  /* max-height: 44.44px;
+  max-width: 48.15px; */
+  min-height: 44.44px;
+  min-width: 48.15px;
+}
+p {
+  color: #463229;
+  font-weight: 400;
+  margin: 10px 0px;
 }
 
 .section5 {
@@ -242,14 +243,14 @@ h2 {
 
 ::placeholder {
   color: #d4d4d4;
-  font-size: 28px;
 }
 
 .section5-container {
-  display: flex;
+  display: grid;
+  /* display: flex;
   align-items: center;
   margin: 30px 0px;
-  justify-content: space-evenly;
+  justify-content: space-evenly; */
 }
 
 .section5-container img {
@@ -262,9 +263,10 @@ h2 {
   background-color: #fffaec;
   border: 1px solid #707070;
   border-radius: 128px;
-  padding: 60px 18px;
+  padding: 100px 0px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 16%);
   height: auto;
+  max-width: 464px;
 }
 
 .section7-card {
@@ -289,21 +291,27 @@ section.section7::before {
   position: relative;
 }
 
-.section5-card-img {
-  height: 234px;
-  width: 375px;
+.section5-card-img img {
+  max-width: 458px;
+  max-height: 234px;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
-
+.section6-img {
+  margin: auto;
+}
 .section1 input[type="submit"] {
   background-color: #cd6229;
   color: #ffffff;
-  font-size: 29px;
   margin: 21px 0;
   border-radius: 46px;
   border: 1px solid #707070;
   cursor: pointer;
-  width: 214px;
-  height: 72px;
+  /* max-width: 214px; */
+  max-height: 72px;
+  font-weight: 600;
+  padding: 3px 0px;
 }
 
 .section5 input[type="submit"],
@@ -311,7 +319,6 @@ section.section7::before {
 .section8 input[type="submit"] {
   background-color: #a14c1f;
   color: #fffaec;
-  font-size: 32px;
   border-radius: 52px;
   border: 1px solid #707070;
   cursor: pointer;
@@ -352,21 +359,18 @@ section.section7::before {
   width: 100%;
 }
 
-.section6-contant h3 {
-  margin-top: 30px;
-}
-
 .section6,
 .section8 {
   background-color: #fffaec;
-  /* padding: 100px 0px; */
   padding: 100px 0px;
 }
 
 .section8 {
   padding: 100px 0px;
 }
-
+.section4-img-item {
+  margin: auto;
+}
 .section7 {
   background-image: url(../img/honey-production.png);
   background-repeat: no-repeat;
@@ -381,23 +385,18 @@ section.section7::before {
   margin: 35px 0px;
 }
 
-.section7 h3 {
-  color: #fffaec;
-  font-size: 48px;
-}
-
-.section6 h3 {
-  font-size: 32px;
-}
-
 .section7-card h4 {
   color: #a14c1f;
-  font-size: 38px;
+  margin: 0px;
+  margin-top: -22px;
 }
 
 .section7-card-img img {
   width: 171px;
   height: 171px;
+}
+.section7 h3 {
+  color: #fffaec;
 }
 
 .section8-container {
@@ -415,10 +414,15 @@ footer {
   text-align: center;
   padding: 60px;
 }
+footer img {
+  max-width: 100%;
+}
 
 footer p {
   color: #fffaec;
-  padding: 25px 135px;
+  max-width: 904px;
+  margin: auto;
+  padding: 25px 0px;
 }
 
 .container {
@@ -428,10 +432,6 @@ footer p {
 
 /* 576px altinda */
 @media (max-width: 576px) {
-  * {
-    font-size: 30px;
-  }
-
   .container {
     max-width: 100%;
   }
@@ -439,16 +439,51 @@ footer p {
   .section1 {
     height: auto;
   }
+  .section1 h1 {
+    font-size: 62px;
+    font-weight: 700;
+  }
+  .section1 p,
+  .section8 p {
+    color: #463229;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .navbar a {
+    text-align: center;
+  }
 
+  .section2 h1 {
+    font-size: 42px;
+    font-weight: 700;
+  }
+  .section4 h2,
+  .section5 h2,
+  .section6 h2,
+  .section8 h2,
+  .section7-card h4,
+  .section8 input[type="submit"] {
+    font-size: 28px;
+  }
+
+  .section4 p,
+  .section7 h2,
+  .section7 p {
+    font-size: 18px;
+  }
+  .section6 p {
+    font-size: 18px;
+  }
   .section2-container,
   .section3-container,
   .section4-container,
-  .section5-container,
   .section7-container,
   .section8-container {
     flex-direction: column;
   }
-
+  .section5-container {
+    grid-template-columns: 1;
+  }
   .section1 .section1-flex-container,
   .section4-container.column-reverse,
   .section6-container {
@@ -466,16 +501,29 @@ footer p {
     margin-bottom: 60px;
   }
 
-  .section2 p,
-  .section1-right-item input[type="submit"],
   .section1-right-item input[type="text"],
-  select {
+  select,
+  ::placeholder {
+    width: 100%;
+    font-size: 18px;
+  }
+  .section2 p {
+    /* max-width: 360px; */
     width: 100%;
     font-size: 22px;
+    font-weight: 600;
   }
-
+  .section2 .container > p {
+    font-size: 28px;
+    font-weight: 500;
+  }
+  .section1-right-item input[type="submit"] {
+    width: 100%;
+    font-size: 19px;
+  }
   .section3-item p {
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 500;
   }
 
   .section8-item {
@@ -494,16 +542,27 @@ footer p {
     width: 100%;
   }
 
-  h1 {
-    font-size: 36px;
+  .section1 h2 {
+    font-size: 28px;
   }
-
-  h2 {
-    font-size: 32px;
+  .section5 .section5-card p {
+    font-size: 22px;
+  }
+  .section5 input[type="submit"],
+  .section7 input[type="submit"],
+  footer p {
+    font-size: 22px;
+  }
+  .section4 h1,
+  .section7 h1,
+  .section5 h1,
+  .section6 h1 {
+    font-size: 55px;
+    font-weight: 800;
   }
 
   .section4 h1 span {
-    font-size: 32px;
+    font-size: 55px;
   }
 
   .section3-item {
@@ -519,13 +578,17 @@ footer p {
     flex-direction: column-reverse;
     align-items: center;
   }
-
-  footer img {
-    width: 100%;
+  .section6 h3 {
+    color: #463229;
+    font-size: 22px;
+  }
+  .section7 h3 {
+    font-size: 38px;
   }
 
-  footer p {
-    padding: 25px 0px;
+  .section8 h1 {
+    font-size: 42px;
+    font-weight: 800;
   }
 
   .section8 input[type="submit"] {
@@ -542,14 +605,39 @@ footer p {
   .section1 {
     height: auto;
   }
-
+  .navbar a {
+    text-align: center;
+  }
+  .section3-item p {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  .section4 h2,
+  .section5 h2,
+  .section6 h2,
+  .section8 h2,
+  .section7-card h4,
+  .section8 input[type="submit"] {
+    font-size: 33px;
+  }
+  .section4 p,
+  .section7 h2,
+  .section7 p {
+    font-size: 23px;
+  }
+  .section6 p {
+    font-size: 23px;
+  }
   .section2-container,
   .section3-container,
   .section4-container,
-  .section5-container,
   .section7-container,
   .section8-container {
     flex-direction: column;
+  }
+  .section5-container {
+    grid-template-columns: 1;
+    justify-items: center;
   }
 
   .section1 .section1-flex-container,
@@ -585,23 +673,59 @@ footer p {
     width: 100%;
   }
 
-  .section2 p,
-  .section1-right-item input[type="submit"],
   .section1-right-item input[type="text"],
-  select {
+  select,
+  ::placeholder {
+    width: 100%;
+    font-size: 23px;
+  }
+  .section2 p {
+    font-size: 27px;
+    font-weight: 600;
     width: 100%;
   }
-
-  h1 {
-    font-size: 56px;
+  .section2 .container > p {
+    font-size: 33px;
+    font-weight: 500;
+  }
+  .section1-right-item input[type="submit"] {
+    width: 100%;
+    font-size: 24px;
   }
 
-  h2 {
-    font-size: 34px;
+  .section1 h1 {
+    font-size: 69px;
+    font-weight: 800;
   }
 
+  .section1 h2 {
+    font-size: 33px;
+  }
+  .section1 p,
+  .section8 p {
+    font-size: 27px;
+  }
+  .section2 h1 {
+    font-size: 49px;
+    font-weight: 800;
+  }
+  .section5 .section5-card p {
+    font-size: 27px;
+  }
+  .section5 input[type="submit"],
+  .section7 input[type="submit"],
+  footer p {
+    font-size: 27px;
+  }
+  .section4 h1,
+  .section7 h1,
+  .section5 h1,
+  .section6 h1 {
+    font-size: 60px;
+    font-weight: 800;
+  }
   .section4 h1 span {
-    font-size: 42px;
+    font-size: 60px;
   }
 
   .section3-item {
@@ -621,29 +745,23 @@ footer p {
   .section8 input[type="submit"] {
     margin-top: 30px;
   }
-
-  footer img {
-    width: 100%;
+  .section6 h3 {
+    color: #463229;
+    font-size: 27px;
+  }
+  .section7 h3 {
+    font-size: 43px;
   }
 
-  footer p {
-    padding: 25px 0px;
-  }
   .section8 h1 {
-    font-size: 52px;
+    font-size: 47px;
+    font-weight: 800;
   }
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
-  }
-
-  .section4 h2,
-  .section5 h2,
-  .section6 h2,
-  .section8 h2 {
-    font-size: 38px;
   }
 }
 
@@ -653,7 +771,7 @@ footer p {
     max-width: 960px;
   }
 }
-
+/* 1200px ustunde */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
@@ -661,19 +779,27 @@ footer p {
   .section1 {
     height: 100vh;
   }
+  .section3-item p {
+    font-size: 45px;
+    font-weight: 600;
+  }
+  .section5 .section5-card p {
+    font-size: 32px;
+  }
 
   .section1 .section1-flex-container,
   .section2-container,
   .section3-container,
   .section4-container,
   .section4-container.column-reverse,
-  .section5-container,
   .section6-container,
   .section7-container,
   .section8-container {
     flex-direction: row;
   }
-
+  .section5-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .section1 .section1-flex-container div,
   .section6-container > div {
     width: 50%;
@@ -688,16 +814,25 @@ footer p {
   }
 
   .section1-right-item input[type="text"],
-  select {
+  select,
+  ::placeholder {
     width: 76%;
+    font-size: 28px;
   }
 
   .section1-right-item input[type="submit"] {
     width: 40%;
+    font-size: 29px;
   }
 
   .section2 p {
     width: max-content;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .section2 .container > p {
+    font-size: 38px;
+    font-weight: 600;
   }
 
   .navbar {
@@ -712,21 +847,38 @@ footer p {
     width: 25%;
   }
 
-  h1 {
+  .section1 h1 {
     font-size: 84px;
+    font-weight: 900;
   }
-
+  .section1 h2 {
+    font-size: 38px;
+    font-weight: 700;
+  }
+  .section1 p,
+  .section8 p {
+    font-size: 32px;
+  }
   .section4 h1,
-  .section7 h1 {
-    font-size: 61px;
+  .section7 h1,
+  .section5 h1,
+  .section6 h1 {
+    font-size: 65px;
+    font-weight: 900;
   }
-
+  .section5 input[type="submit"],
+  .section7 input[type="submit"],
+  footer p {
+    font-size: 32px;
+  }
   .section2 h1 {
-    font-size: 60px;
+    font-size: 64px;
+    font-weight: 900;
   }
 
   .section4 h1 span {
-    font-size: 60px;
+    font-size: 65px;
+    font-weight: 900;
   }
 
   .section3-item {
@@ -737,18 +889,10 @@ footer p {
     display: block;
   }
 
-  footer img {
-    width: 50%;
-  }
-
   .section2-item > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  footer p {
-    padding: 25px 135px;
   }
 
   .section8 input[type="submit"] {
@@ -758,18 +902,34 @@ footer p {
   .section4 h2,
   .section5 h2,
   .section6 h2,
-  .section8 h2 {
-    font-size: 34px;
+  .section8 h2,
+  .section7-card h4,
+  .section8 input[type="submit"] {
+    font-size: 38px;
+    font-weight: 700;
+  }
+  .section4 p,
+  .section7 h2,
+  .section7 p {
+    font-size: 28px;
+  }
+  .section6 p {
+    font-size: 28px;
+    font-weight: 600;
   }
   .section8 h1 {
+    font-size: 52px;
+    font-weight: 900;
+  }
+  .section6 h3 {
+    color: #463229;
+    font-size: 32px;
+  }
+  .section7 h3 {
     font-size: 48px;
   }
   .section8 input[type="submit"] {
     font-size: 34px;
-  }
-  .section5 h1,
-  .section6 h1 {
-    font-size: 60px;
   }
 }
 
@@ -779,7 +939,7 @@ footer p {
   }
 }
 
-@media (min-width: 1760px) {
+/* @media (min-width: 1760px) {
   .container {
     max-width: 80%;
   }
@@ -900,4 +1060,4 @@ footer p {
   .section6 {
     padding-bottom: 0px;
   }
-}
+} */

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
 }
+
 body {
   margin: 0px;
   padding: 0px;
@@ -43,7 +44,7 @@ body {
   list-style: none;
 }
 
-.navbar-list li + li a::before {
+.navbar-list li+li a::before {
   content: "";
   background-color: rgb(112, 112, 112);
   width: 2px;
@@ -76,7 +77,7 @@ hr {
   margin: 20px;
 }
 
-.section1-right-item h2 > span {
+.section1-right-item h2>span {
   color: #cd6229;
 }
 
@@ -157,7 +158,7 @@ h1 {
   position: relative;
 }
 
-.section3-container > div + div::before {
+.section3-container>div+div::before {
   content: "";
   height: 210px;
   position: absolute;
@@ -176,7 +177,7 @@ h1 {
   margin: 35px 0px;
 }
 
-.section4-container img {
+.section4-container .section4-img-item img {
   width: 100%;
 }
 
@@ -215,20 +216,26 @@ h2 {
   margin-top: -13px;
 }
 
-.section4-container ~ p {
+.section4-container~p {
   margin-top: 96px;
 }
 
-.list-img {
+/* .list-img {
   margin: 19px 0px;
   margin-left: 58px;
-}
+  max-width: 100%;
+  height: auto;
+  width: 45px;
+} */
+
 .list-img img {
-  min-height: 44.44px;
-  min-width: 48.15px;
-  /* min-height: 34.44px;
-  min-width: 38.15px; */
+  margin: 19px 0px;
+  margin-left: 58px;
+  max-width: 100%;
+  height: auto;
+  width: 40px;
 }
+
 p {
   color: #463229;
   font-weight: 400;
@@ -262,7 +269,7 @@ p {
   padding: 100px 0px;
   box-shadow: 5px 5px 10px rgb(0, 0, 0, 16%);
   height: auto;
-  max-width: 350px;
+  max-width: 450px;
 }
 
 .section7-card {
@@ -294,9 +301,11 @@ section.section7::before {
   width: 100%;
   height: 100%;
 }
+
 .section6-img {
   margin: auto;
 }
+
 .section1 input[type="submit"] {
   background-color: #cd6229;
   color: #ffffff;
@@ -363,9 +372,11 @@ section.section7::before {
 .section8 {
   padding: 100px 0px;
 }
+
 .section4-img-item {
   margin: auto;
 }
+
 .section7 {
   background-image: url(../img/honey-production.png);
   background-repeat: no-repeat;
@@ -390,6 +401,7 @@ section.section7::before {
   width: 171px;
   height: 171px;
 }
+
 .section7 h3 {
   color: #fffaec;
 }
@@ -409,8 +421,10 @@ footer {
   text-align: center;
   padding: 60px;
 }
+
 footer img {
   max-width: 100%;
+  width: 732px;
 }
 
 footer p {
@@ -434,16 +448,19 @@ footer p {
   .section1 {
     height: auto;
   }
+
   .section1 h1 {
     font-size: 62px;
     font-weight: 700;
   }
+
   .section1 p,
   .section8 p {
     color: #463229;
     font-size: 22px;
     font-weight: 400;
   }
+
   .navbar a {
     text-align: center;
   }
@@ -452,6 +469,7 @@ footer p {
     font-size: 42px;
     font-weight: 700;
   }
+
   .section4 h2,
   .section5 h2,
   .section6 h2,
@@ -466,9 +484,11 @@ footer p {
   .section7 p {
     font-size: 18px;
   }
+
   .section6 p {
     font-size: 18px;
   }
+
   .section2-container,
   .section3-container,
   .section4-container,
@@ -477,10 +497,12 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
+
   .section5-container {
     grid-template-columns: 1;
     justify-items: center;
   }
+
   .section1 .section1-flex-container,
   .section4-container.column-reverse,
   .section6-container {
@@ -489,12 +511,12 @@ footer p {
   }
 
   .section1 .section1-flex-container div,
-  .section4-container > div,
-  .section6-container > div {
+  .section4-container>div,
+  .section6-container>div {
     width: 100%;
   }
 
-  .section7-container > div {
+  .section7-container>div {
     width: 100%;
     margin-bottom: 60px;
   }
@@ -505,19 +527,23 @@ footer p {
     width: 100%;
     font-size: 18px;
   }
+
   .section2 p {
     width: 100%;
     font-size: 22px;
     font-weight: 600;
   }
-  .section2 .container > p {
+
+  .section2 .container>p {
     font-size: 28px;
     font-weight: 500;
   }
+
   .section1-right-item input[type="submit"] {
     width: 100%;
     font-size: 19px;
   }
+
   .section3-item p {
     font-size: 35px;
     font-weight: 500;
@@ -543,14 +569,17 @@ footer p {
   .section1 h2 {
     font-size: 28px;
   }
+
   .section5 .section5-card p {
     font-size: 22px;
   }
+
   .section5 input[type="submit"],
   .section7 input[type="submit"],
   footer p {
     font-size: 22px;
   }
+
   .section4 h1,
   .section7 h1,
   .section5 h1,
@@ -567,19 +596,21 @@ footer p {
     width: 100%;
   }
 
-  .section3 div > div + div::before {
+  .section3 div>div+div::before {
     display: none;
   }
 
-  .section2-item > div {
+  .section2-item>div {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
   }
+
   .section6 h3 {
     color: #463229;
     font-size: 22px;
   }
+
   .section7 h3 {
     font-size: 38px;
   }
@@ -603,13 +634,16 @@ footer p {
   .section1 {
     height: auto;
   }
+
   .navbar a {
     text-align: center;
   }
+
   .section3-item p {
     font-size: 40px;
     font-weight: 500;
   }
+
   .section4 h2,
   .section5 h2,
   .section6 h2,
@@ -618,14 +652,17 @@ footer p {
   .section8 input[type="submit"] {
     font-size: 33px;
   }
+
   .section4 p,
   .section7 h2,
   .section7 p {
     font-size: 23px;
   }
+
   .section6 p {
     font-size: 23px;
   }
+
   .section2-container,
   .section3-container,
   .section4-container,
@@ -634,6 +671,7 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
+
   .section5-container {
     grid-template-columns: 1;
     justify-items: center;
@@ -647,12 +685,12 @@ footer p {
   }
 
   .section1 .section1-flex-container div,
-  .section4-container > div,
-  .section6-container > div {
+  .section4-container>div,
+  .section6-container>div {
     width: 100%;
   }
 
-  .section7-container > div {
+  .section7-container>div {
     width: 100%;
     margin-bottom: 60px;
   }
@@ -680,15 +718,18 @@ footer p {
     width: 100%;
     font-size: 23px;
   }
+
   .section2 p {
     font-size: 27px;
     font-weight: 600;
     width: 100%;
   }
-  .section2 .container > p {
+
+  .section2 .container>p {
     font-size: 33px;
     font-weight: 500;
   }
+
   .section1-right-item input[type="submit"] {
     width: 100%;
     font-size: 24px;
@@ -702,22 +743,27 @@ footer p {
   .section1 h2 {
     font-size: 33px;
   }
+
   .section1 p,
   .section8 p {
     font-size: 27px;
   }
+
   .section2 h1 {
     font-size: 49px;
     font-weight: 800;
   }
+
   .section5 .section5-card p {
     font-size: 27px;
   }
+
   .section5 input[type="submit"],
   .section7 input[type="submit"],
   footer p {
     font-size: 27px;
   }
+
   .section4 h1,
   .section7 h1,
   .section5 h1,
@@ -725,6 +771,7 @@ footer p {
     font-size: 60px;
     font-weight: 800;
   }
+
   .section4 h1 span {
     font-size: 60px;
   }
@@ -733,11 +780,11 @@ footer p {
     width: 100%;
   }
 
-  .section3 div > div + div::before {
+  .section3 div>div+div::before {
     display: none;
   }
 
-  .section2-item > div {
+  .section2-item>div {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -746,10 +793,12 @@ footer p {
   .section8 input[type="submit"] {
     margin-top: 30px;
   }
+
   .section6 h3 {
     color: #463229;
     font-size: 27px;
   }
+
   .section7 h3 {
     font-size: 43px;
   }
@@ -772,18 +821,22 @@ footer p {
     max-width: 960px;
   }
 }
+
 /* 1200px ustunde */
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
   }
+
   .section1 {
     height: 100vh;
   }
+
   .section3-item p {
     font-size: 45px;
     font-weight: 600;
   }
+
   .section5 .section5-card p {
     font-size: 32px;
   }
@@ -798,19 +851,21 @@ footer p {
   .section8-container {
     flex-direction: row;
   }
+
   .section5-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .section1 .section1-flex-container div,
-  .section6-container > div {
+  .section6-container>div {
     width: 50%;
   }
 
-  .section4-container > div {
+  .section4-container>div {
     width: 45%;
   }
 
-  .section7-container > div {
+  .section7-container>div {
     width: 46%;
   }
 
@@ -831,7 +886,8 @@ footer p {
     font-size: 32px;
     font-weight: 700;
   }
-  .section2 .container > p {
+
+  .section2 .container>p {
     font-size: 38px;
     font-weight: 600;
   }
@@ -852,14 +908,17 @@ footer p {
     font-size: 84px;
     font-weight: 900;
   }
+
   .section1 h2 {
     font-size: 38px;
     font-weight: 700;
   }
+
   .section1 p,
   .section8 p {
     font-size: 32px;
   }
+
   .section4 h1,
   .section7 h1,
   .section5 h1,
@@ -867,11 +926,13 @@ footer p {
     font-size: 65px;
     font-weight: 900;
   }
+
   .section5 input[type="submit"],
   .section7 input[type="submit"],
   footer p {
     font-size: 32px;
   }
+
   .section2 h1 {
     font-size: 64px;
     font-weight: 900;
@@ -886,11 +947,11 @@ footer p {
     width: 33.3%;
   }
 
-  .section3 div > div + div::before {
+  .section3 div>div+div::before {
     display: block;
   }
 
-  .section2-item > div {
+  .section2-item>div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -909,26 +970,32 @@ footer p {
     font-size: 38px;
     font-weight: 700;
   }
+
   .section4 p,
   .section7 h2,
   .section7 p {
     font-size: 28px;
   }
+
   .section6 p {
     font-size: 28px;
     font-weight: 600;
   }
+
   .section8 h1 {
     font-size: 52px;
     font-weight: 900;
   }
+
   .section6 h3 {
     color: #463229;
     font-size: 32px;
   }
+
   .section7 h3 {
     font-size: 48px;
   }
+
   .section8 input[type="submit"] {
     font-size: 34px;
   }

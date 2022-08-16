@@ -25,7 +25,9 @@ body {
   font-weight: 600;
   font-size: 22px;
 }
-
+.navbar a img {
+  max-width: 378px;
+}
 .section1 {
   background: url(../img/Mask\ Group\ 6.png),
     linear-gradient(to right, rgba(255, 241, 204, 100%), rgb(255, 177, 7, 87%));
@@ -44,7 +46,7 @@ body {
   list-style: none;
 }
 
-.navbar-list li+li a::before {
+.navbar-list li + li a::before {
   content: "";
   background-color: rgb(112, 112, 112);
   width: 2px;
@@ -58,6 +60,7 @@ hr {
   width: 100%;
   height: 1px;
   background: #a14c1f;
+  border: none;
 }
 
 .section1-flex-container {
@@ -67,7 +70,7 @@ hr {
 
 .section1-flex-container img {
   width: 100%;
-  height: 100%;
+  max-width: 927px;
   object-fit: contain;
 }
 
@@ -76,8 +79,12 @@ hr {
   justify-content: space-around;
   margin: 20px;
 }
-
-.section1-right-item h2>span {
+.section3-container img {
+  max-width: 209.14px;
+  max-height: 241px;
+  width: 100%;
+}
+.section1-right-item h2 > span {
   color: #cd6229;
 }
 
@@ -158,7 +165,7 @@ h1 {
   position: relative;
 }
 
-.section3-container>div+div::before {
+.section3-container > div + div::before {
   content: "";
   height: 210px;
   position: absolute;
@@ -179,6 +186,7 @@ h1 {
 
 .section4-container .section4-img-item img {
   width: 100%;
+  max-width: 674px;
 }
 
 .section4 h1 span {
@@ -216,7 +224,7 @@ h2 {
   margin-top: -13px;
 }
 
-.section4-container~p {
+.section4-container ~ p {
   margin-top: 96px;
 }
 
@@ -231,7 +239,7 @@ h2 {
 .list-img img {
   margin: 19px 0px;
   margin-left: 58px;
-  max-width: 100%;
+  min-width: 30px;
   height: auto;
   width: 40px;
 }
@@ -361,6 +369,9 @@ section.section7::before {
 
 .section6-container img {
   width: 100%;
+  max-width: 917px;
+  height: auto;
+  object-fit: contain;
 }
 
 .section6,
@@ -423,8 +434,9 @@ footer {
 }
 
 footer img {
-  max-width: 100%;
-  width: 732px;
+  max-width: 732px;
+  width: 100%;
+  max-height: 183px;
 }
 
 footer p {
@@ -511,12 +523,12 @@ footer p {
   }
 
   .section1 .section1-flex-container div,
-  .section4-container>div,
-  .section6-container>div {
+  .section4-container > div,
+  .section6-container > div {
     width: 100%;
   }
 
-  .section7-container>div {
+  .section7-container > div {
     width: 100%;
     margin-bottom: 60px;
   }
@@ -534,7 +546,7 @@ footer p {
     font-weight: 600;
   }
 
-  .section2 .container>p {
+  .section2 .container > p {
     font-size: 28px;
     font-weight: 500;
   }
@@ -596,11 +608,11 @@ footer p {
     width: 100%;
   }
 
-  .section3 div>div+div::before {
+  .section3 div > div + div::before {
     display: none;
   }
 
-  .section2-item>div {
+  .section2-item > div {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -685,12 +697,12 @@ footer p {
   }
 
   .section1 .section1-flex-container div,
-  .section4-container>div,
-  .section6-container>div {
+  .section4-container > div,
+  .section6-container > div {
     width: 100%;
   }
 
-  .section7-container>div {
+  .section7-container > div {
     width: 100%;
     margin-bottom: 60px;
   }
@@ -725,7 +737,7 @@ footer p {
     width: 100%;
   }
 
-  .section2 .container>p {
+  .section2 .container > p {
     font-size: 33px;
     font-weight: 500;
   }
@@ -780,11 +792,11 @@ footer p {
     width: 100%;
   }
 
-  .section3 div>div+div::before {
+  .section3 div > div + div::before {
     display: none;
   }
 
-  .section2-item>div {
+  .section2-item > div {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -857,15 +869,15 @@ footer p {
   }
 
   .section1 .section1-flex-container div,
-  .section6-container>div {
+  .section6-container > div {
     width: 50%;
   }
 
-  .section4-container>div {
+  .section4-container > div {
     width: 45%;
   }
 
-  .section7-container>div {
+  .section7-container > div {
     width: 46%;
   }
 
@@ -887,7 +899,7 @@ footer p {
     font-weight: 700;
   }
 
-  .section2 .container>p {
+  .section2 .container > p {
     font-size: 38px;
     font-weight: 600;
   }
@@ -947,11 +959,11 @@ footer p {
     width: 33.3%;
   }
 
-  .section3 div>div+div::before {
+  .section3 div > div + div::before {
     display: block;
   }
 
-  .section2-item>div {
+  .section2-item > div {
     display: flex;
     flex-direction: column;
     align-items: center;

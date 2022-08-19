@@ -89,6 +89,7 @@ hr {
 }
 
 .section1-right-item input[type="text"],
+.section1-right-item input[type="number"],
 select {
   padding: 17px 37px;
   margin: 12px 0;
@@ -534,6 +535,7 @@ footer p {
   }
 
   .section1-right-item input[type="text"],
+  .section1-right-item input[type="number"],
   select,
   ::placeholder {
     width: 100%;
@@ -725,6 +727,7 @@ footer p {
   }
 
   .section1-right-item input[type="text"],
+  .section1-right-item input[type="number"],
   select,
   ::placeholder {
     width: 100%;
@@ -882,6 +885,7 @@ footer p {
   }
 
   .section1-right-item input[type="text"],
+  .section1-right-item input[type="number"],
   select,
   ::placeholder {
     width: 76%;

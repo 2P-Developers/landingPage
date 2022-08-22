@@ -8,7 +8,38 @@ body {
   padding: 0px;
   direction: rtl;
 }
+.section1 .phone {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
+.section1 .country-code-flag {
+  position: absolute;
+  left: 25px;
+  display: flex;
+  font-size: 21px;
+  align-items: center;
+}
+.country-code {
+  position: relative;
+  margin-right: 20px;
+}
+div.country-code::before {
+  content: "";
+  background-color: rgb(112, 112, 112);
+  width: 2px;
+  position: absolute;
+  border-radius: 100px;
+  right: -10px;
+  top: 0;
+  height: 100%;
+}
+.country-flag-img img {
+  width: 100%;
+  max-width: 50px;
+  padding-top: 10px;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -27,6 +58,7 @@ body {
 }
 .navbar a img {
   max-width: 378px;
+  width: 100%;
 }
 .section1 {
   background: url(../img/Mask\ Group\ 6.png),
@@ -68,7 +100,7 @@ hr {
   justify-content: center;
 }
 
-.section1-flex-container img {
+.section1-flex-container .section1-left-item img {
   width: 100%;
   max-width: 927px;
   object-fit: contain;
@@ -523,7 +555,7 @@ footer p {
     align-items: center;
   }
 
-  .section1 .section1-flex-container div,
+  /* .section1 .section1-flex-container div, */
   .section4-container > div,
   .section6-container > div {
     width: 100%;
@@ -698,7 +730,7 @@ footer p {
     align-items: center;
   }
 
-  .section1 .section1-flex-container div,
+  /* .section1 .section1-flex-container div, */
   .section4-container > div,
   .section6-container > div {
     width: 100%;
@@ -844,7 +876,7 @@ footer p {
   }
 
   .section1 {
-    height: 100vh;
+   min-height: 100vh;
   }
 
   .section3-item p {
@@ -871,7 +903,7 @@ footer p {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .section1 .section1-flex-container div,
+  /* .section1 .section1-flex-container div, */
   .section6-container > div {
     width: 50%;
   }
@@ -888,7 +920,7 @@ footer p {
   .section1-right-item input[type="number"],
   select,
   ::placeholder {
-    width: 76%;
+    /* width: 76%; */
     font-size: 28px;
   }
 

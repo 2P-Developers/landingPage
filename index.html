@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
     <title>Landing Page</title>
 </head>
 
@@ -38,10 +41,17 @@
                     <p>خلطة العسل التركي مع الجنسنج وغذاء الملكات وحبات الطلع</p>
                     <form action="/" id="form">
                         <input type="text" placeholder="الاسم الكامل" id="name">
-                        <input type="text" placeholder="رقم الهاتف" id="phone-number">
-                        <select name="option">
-                            <option value="1">عبوة واحدة 250 ريال</option>
-                            <option value="2">عبوتين 450 ريال</option>
+                        <div class="phone">
+                            <input type="text" placeholder="رقم الهاتف" id="phone-number" class="phone-number">
+                            <div class="country-code-flag">
+                                <div class="country-flag-img"><img src="https://countryflagsapi.com/png/brazil"
+                                        id="country-flag" alt=""></div>
+                                <div class="country-code" id="country-code"></div>
+                            </div>
+                        </div>
+                        <select name="option" id="comboBox">
+                            <!-- <option value="1">عبوة واحدة 250 ريال</option>
+                            <option value="2">عبوتين 450 ريال</option> -->
                         </select>
                         <input type="submit" value="أرسل الطلب" id="submit-form">
                     </form>
@@ -92,7 +102,7 @@
                     </div>
                     <div class="section3-item">
                         <div>
-                            <img src="./img/Group 12.png" width="200px" height="210px" alt=""> 
+                            <img src="./img/Group 12.png" width="200px" height="210px" alt="">
                             <p>دفع عند الإستلام</p>
                         </div>
                     </div>
@@ -121,8 +131,8 @@
                         </div>
                         <p> <strong> باشا سراي </strong>هو المنتج <strong>الأفضل</strong> للمتزوجين
                             وللمقبلين على الزواج
-                        
-                        .</p>
+
+                            .</p>
                     </div>
                 </div>
                 <div class="section4-img-item"><img src="./img/Mask Group 7.png" alt=""></div>
@@ -137,7 +147,7 @@
                             <img src="./img/Group 57.png" alt="">
                         </div>
                         <p>يخلصك من التعب والإجهاد الناتجان عن عملية
-                           المذاكرة والتفكير.</p>
+                            المذاكرة والتفكير.</p>
                     </div>
                     <div class="section4-lists">
                         <div class="list-img">
@@ -237,7 +247,7 @@
                     <input type="submit" value="اطلب العرض الان">
                 </div>
                 <div class="">
-                    <img src="./img/Group 27.png" alt=""> 
+                    <img src="./img/Group 27.png" alt="">
                 </div>
                 <div class="section5-card">
                     <div class="section5-card-img">
@@ -277,7 +287,7 @@
             </div>
     </section>
     <section class=" section7 ">
-        
+
         <div class="container ">
             <h1>آراء الزبائن</h1>
             <h3>ما رأي الزبائن بمنتجنا؟</h3>
@@ -343,6 +353,9 @@
         </div>
         </div>
     </footer>
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </body>
+
 </html>

@@ -16,28 +16,21 @@ body {
 
 .section1 .country-code-flag {
   position: absolute;
-  left: 25px;
+  left: 0;
   display: flex;
-  font-size: 21px;
   align-items: center;
 }
-.country-code {
-  position: relative;
-  margin-right: 20px;
+.section1 .country-code-flag select {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border: none;
+  border-right: 2px solid rgb(112, 112, 112);
+  margin-right: 10px;
 }
-div.country-code::before {
-  content: "";
-  background-color: rgb(112, 112, 112);
-  width: 2px;
-  position: absolute;
-  border-radius: 100px;
-  right: -10px;
-  top: 0;
-  height: 100%;
-}
+
 .country-flag-img img {
   width: 100%;
-  max-width: 50px;
+  max-width: 80px;
   padding-top: 10px;
 }
 .navbar {
@@ -876,7 +869,7 @@ footer p {
   }
 
   .section1 {
-   min-height: 100vh;
+    min-height: 100vh;
   }
 
   .section3-item p {

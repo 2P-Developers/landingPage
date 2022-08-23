@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 
     <title>Landing Page</title>
@@ -28,7 +28,6 @@
                     <li><a href="#">مكونات المنتج</a></li>
                     <li><a href="#">طريقة الاستعمال</a></li>
                     <li><a href="#">أراء الزبائن</a></li>
-                    <!-- <li> <a href="#" class="icon"><i class="fa fa-bars"></i>  </a></li> -->
                 </ul>
             </nav>
             <hr />
@@ -42,11 +41,16 @@
                     <form action="/" id="form">
                         <input type="text" placeholder="الاسم الكامل" id="name">
                         <div class="phone">
-                            <input type="text" placeholder="رقم الهاتف" id="phone-number" class="phone-number">
+                            <input type="text" placeholder="رقم الهاتف" id="phone-number" class="phone-number" >
                             <div class="country-code-flag">
-                                <div class="country-flag-img"><img src="https://countryflagsapi.com/png/brazil"
-                                        id="country-flag" alt=""></div>
-                                <div class="country-code" id="country-code"></div>
+                                <div class="country-flag-img"><img src=""  id="country-flag" alt=""></div>
+                                <select name="option"  id="comboBoxPhone" >
+                                    <!-- <option value=""> TR
+                                        <div class="country-flag-img"><img src="https://www.countryflagsapi.com/png/tr"
+                                                id="country-flag" alt=""></div>
+                                        <div class="country-code" id="country-code"></div>
+                                    </option> -->
+                                </select>
                             </div>
                         </div>
                         <select name="option" id="comboBox">

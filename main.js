@@ -1,20 +1,11 @@
-// import { toast } from "./node_modules/toastr/toastr.js"
-
 
 let userName = document.getElementById("name");
 let userNumber = document.getElementById("phone-number");
 
-async function readData() {
-    const response = await fetch("offers.json");
-    let myData = await response.json();
-    return myData;
-}
-
-
 if (!window.localStorage.getItem("formfilledCounter")) {
     window.localStorage.setItem("formfilledCounter", Number(0));
 }
-window.localStorage.clear();
+//window.localStorage.clear();
 
 document.forms[0].onsubmit = function (e) {
     let nameValid = false;
@@ -32,7 +23,7 @@ document.forms[0].onsubmit = function (e) {
             e.preventDefault();
         } else {
             window.localStorage.setItem("formfilledCounter", Number(window.localStorage.getItem("formfilledCounter")) + 1);
-            // toastr.success('Success messages');
+            // window.toastr.success("تم أرسال الطلب بنجاح....", { timeOut: 5000 });
             window.alert("تم أرسال الطلب بنجاح....");
 
         }
@@ -46,11 +37,13 @@ document.forms[0].onsubmit = function (e) {
 function nameValidate(userName) {
     let reName = /^[\u0621-\u064AA-Za-z]+$/;
     if (userName.value === "") {
-        window.alert(" يجب ادخال اسم المستخدم");
+        // window.alert(" يجب ادخال اسم المستخدم");
+        window.toastr.error('يجب ادخال اسم المستخدم');
         return false;
     }
     if (!reName.test(userName.value)) {
-        window.alert(" يجب ادخال الاسم احرف فقط");
+        // window.alert(" يجب ادخال الاسم احرف فقط");
+        window.toastr.error("يجب ادخال الاسم احرف فقط");
         return false;
     }
     else {
@@ -63,11 +56,13 @@ function numberValidate(userNumber) {
     let reNumber = /^[\u0660-\u06690-9]{10}$/
 
     if (userNumber.value === "") {
-        window.alert(" يجب ادخال رقم المستخدم");
+        toastr.error('يجب ادخال رقم المستخدم')
+        // window.alert(" يجب ادخال رقم المستخدم");
         return false;
     }
     if (!reNumber.test(userNumber.value)) {
-        window.alert("يجب ادخال أرقام فقط وعدد الأرقام يجب أن يكون 10 ");
+        toastr.error('يجب ادخال أرقام فقط وعدد الأرقام يجب أن يكون 10 ')
+        // window.alert("يجب ادخال أرقام فقط وعدد الأرقام يجب أن يكون 10 ");
         return false;
     }
     else {
@@ -75,6 +70,11 @@ function numberValidate(userNumber) {
     }
 }
 // comboBox 
+async function readData() {
+    const response = await fetch("offers.json");
+    let myData = await response.json();
+    return myData;
+}
 async function fillComboBox() {
     let comboBox = document.getElementById("comboBox");
     let data = await readData();
@@ -92,7 +92,11 @@ async function fillComboBox() {
 
     });
 }
-fillComboBox();
+let countryFlag = document.getElementById("country-flag");
+var select = document.getElementById("comboBoxPhone");
+select.addEventListener('change', function () {
+    countryFlag.src = `https://www.countryflagsapi.com/png/${select.value.slice(0, 3)}`;
+});
 
 async function getUserCountry() {
     const response = await fetch("https://api.db-ip.com/v2/free/self");
@@ -103,13 +107,23 @@ async function getCountryPhoneCode() {
     const response = await fetch("CountryCodes.json");
     let myData = await response.json();
     let userCountryCode = await getUserCountry();
+    // let userCountryPhoneCode = myData.find((element) => element.code === userCountryCode.countryCode).dial_code;
+    let comboBox = document.getElementById("comboBoxPhone");
 
-    let countryPhoneCode = myData.find((element) => element.code === userCountryCode.countryCode).dial_code;
-    let countryPhoneCodeDiv = document.getElementById("country-code");
-    let myText = document.createTextNode(`${userCountryCode.countryCode} : ${countryPhoneCode}`);
-    countryPhoneCodeDiv.appendChild(myText);
 
-    let countryFlag = document.getElementById("country-flag");
-    countryFlag.src = `https://www.countryflagsapi.com/png/${userCountryCode.countryCode}`;
+    myData.forEach((e) => {
+        let option = document.createElement("option");
+        option.text = `${e.code} : ${e.dial_code}`;
+        comboBox.appendChild(option);
+
+        if (e.code === userCountryCode.countryCode) {
+            option.selected = true;
+            countryFlag.src = `https://www.countryflagsapi.com/png/${e.code}`;
+        }
+    });
 }
+
+//call functions
+fillComboBox();
 getCountryPhoneCode();
+

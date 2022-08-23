@@ -99,7 +99,7 @@ select.addEventListener('change', function () {
 });
 
 async function getUserCountry() {
-    const response = await fetch("https://api.db-ip.com/v2/free/self");
+    const response = await fetch("https://ipgeo.2p-host.com/");
     let myData = await response.json();
     return myData;
 }
@@ -116,7 +116,7 @@ async function getCountryPhoneCode() {
         option.text = `${e.code} : ${e.dial_code}`;
         comboBox.appendChild(option);
 
-        if (e.code === userCountryCode.countryCode) {
+        if (e.code === userCountryCode.country_code2) {
             option.selected = true;
             countryFlag.src = `https://www.countryflagsapi.com/png/${e.code}`;
         }

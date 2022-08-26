@@ -29,7 +29,9 @@ document.forms[0].onsubmit = function (e) {
         }
     }
     else {
-        window.alert(" لا يمكنك تعبئة الطلب أكثر من مرتين..");
+        toastr.error('لا يمكنك تعبئة الطلب أكثر من مرتين..');
+        // window.alert(" لا يمكنك تعبئة الطلب أكثر من مرتين..");
+        e.preventDefault();
     }
 
 }
@@ -56,12 +58,12 @@ function numberValidate(userNumber) {
     let reNumber = /^[\u0660-\u06690-9]{10}$/
 
     if (userNumber.value === "") {
-        toastr.error('يجب ادخال رقم المستخدم')
+        toastr.error('يجب ادخال رقم المستخدم');
         // window.alert(" يجب ادخال رقم المستخدم");
         return false;
     }
     if (!reNumber.test(userNumber.value)) {
-        toastr.error('يجب ادخال أرقام فقط وعدد الأرقام يجب أن يكون 10 ')
+        toastr.error('يجب ادخال أرقام فقط وعدد الأرقام يجب أن يكون 10 ');
         // window.alert("يجب ادخال أرقام فقط وعدد الأرقام يجب أن يكون 10 ");
         return false;
     }
